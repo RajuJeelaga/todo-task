@@ -63,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-fundamentals-demo:build"
+            "browserTarget": "angular-fundamentals-demo:build",
+            "port": 1400
           },
           "configurations": {
             "production": {
