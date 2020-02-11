@@ -1,0 +1,24 @@
+<h6><b>Custom Events</b></h6>
+<hr>
+<ul>
+  <li *ngFor="let hero of heros">
+    <app-display-heros (deleteHeroEvent)="delete($event)" [hero]="hero"></app-display-heros>
+  </li>
+</ul>
+
+<h6><b>Custom Dev Events</b></h6>
+<hr>
+<ul>
+  <li *ngFor="let dev of devs">
+    <app-display-dev (deleteDevEvent)="delete($event)" [dev]="dev"></app-display-dev>
+  </li>
+</ul>
+<br>
+<h6><b>Input Output Properties</b></h6>
+<hr>
+<h6>With Aliasing:</h6>
+<ul>
+  <li *ngFor="let hero of heros">
+    <app-hero-bio (deleteRequest)="delete($event)" [name]="hero"></app-hero-bio>
+  </li>
+</ul>
