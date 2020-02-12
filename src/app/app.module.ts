@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
 import { IndexComponent } from './index/index.component';
@@ -18,7 +19,8 @@ import { IndexComponent } from './index/index.component';
     BrowserModule,
     AppRoutingModule,
     ComponentsTemplatesModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

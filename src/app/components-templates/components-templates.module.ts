@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DisplayDataInTemplateComponent } from './display-data-in-template/display-data-in-template.component';
 import { DisplayDataInTemplateUrlComponent } from './display-data-in-template-url/display-data-in-template-url.component';
@@ -18,7 +19,8 @@ import { HeroBioComponent } from './hero-bio/hero-bio.component';
 @NgModule({
   declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, CustomEventsComponent, TwoWayBindingComponent, DirectivesComponent, InteractionComponent, LifecycleHooksComponent, HeroDetailsComponent, DisplayHerosComponent, DisplayDevComponent, HeroBioComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class ComponentsTemplatesModule { }
