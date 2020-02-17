@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import{ DisplayDataInTemplateComponent } from './components-templates/display-data-in-template/display-data-in-template.component';
@@ -9,6 +11,8 @@ import{ TwoWayBindingComponent } from './components-templates/two-way-binding/tw
 import{ DirectivesComponent } from './components-templates/directives/directives.component';
 import{InteractionComponent } from './components-templates/interaction/interaction.component';
 import{ LifecycleHooksComponent } from './components-templates/lifecycle-hooks/lifecycle-hooks.component';
+import { FormControlComponent } from './forms-demo/reactive/form-control/form-control.component';
+
 
 const routes: Routes = [
   {path: 'index', component: IndexComponent },
@@ -20,11 +24,15 @@ const routes: Routes = [
   {path: 'components-templates/directives', component: DirectivesComponent},
   {path :'components-templates/component-interaction', component:InteractionComponent},
   {path: 'components-templates/lifecycle-hooks', component:LifecycleHooksComponent},
+
+  {path: 'forms/reactive/form-control', component:FormControlComponent},
   {path : '', redirectTo:'index', pathMatch:'full'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
